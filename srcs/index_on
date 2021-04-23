@@ -7,16 +7,14 @@ server {
 
 server {
 	listen 443 ssl;
-	listen [::]:442 ssl;
+	listen [::]:443 ssl;
 
 	ssl on;
 	ssl_certificate /etc/ssl/certs/localhost.dev.crt;
 	ssl_certificate_key /etc/ssl/private/localhost.dev.key;
 
 	root /var/www/html;
-
 	index index.html index.htm index.php #index.ngiinx-debian.html;
-
 	server_name ft_server;
 	location / {
 		autoindex on;
